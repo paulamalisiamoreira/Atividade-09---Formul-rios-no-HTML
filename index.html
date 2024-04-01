@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+
+    <!-- Esse html deve conter as seguintes explicações
+Como funciona o container form?
+Quais os tipos de input?
+Como funciona o post?-->
+
+
+
+<!-- Form é a tag de criação do formulário  -->
+<!-- O action faz o caminho para onde os dados do formulário serão enviados quando o formulário for submetido -->
+<!-- no method, existem duas funções principais, podendo ser "post" ou "get", o get:Os dados do formulário são anexados à URL especificada no atributo action, resultando em uma URL.  O post: são enviados no corpo da solicitação HTTP, tornando-os mais seguros e adequados para enviar grandes quantidades de dados ou dados sensíveis, como senhas. -->
+
+ 
+<form action="/pagRedirecionamentoInfos.html" method="post">
+    <legend>Nome e email</legend>
+<!-- legend é a legenda do forms -->
+
+    <br>
+    <div >
+        <label for="nome">Nome:</label>
+        <!-- label é como se fosse uma div que estivesse rotulando com o nome da função, aquela parte que vai ser inserida alguma informação -->
+        <span aria-label="required">*</span>
+        <!-- o aria-label coloca um audiodescrição do campo  -->
+        <br>
+        <input type="text"  id="nome">
+    </div>
+
+
+    <div>
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <span aria-label="required">*</span>
+        <br>
+        <input type="date" id="dataNascimento">
+
+    </div>
+
+    <div>
+        <label for="email">Email:</label>
+        <span aria-label="required">*</span>
+        <br>
+        <input type="email" id="email">
+        <!-- o input email cria uma caixa inteligente para o campo de email, quando eu testei, ele já puxou o histórico de emails salvos do meu navegador -->
+    </div>
+
+    <div>
+        <label for="senhaEmail">Senha:</label>
+        <span aria-label="required">*</span>
+        <br>
+        <input type="password"  id="senhaEmail">
+    </div>
+
+    <div>
+        <label for="arquivo">Escolha um arquivo:</label>
+        <br>
+        <input type="file" name="file_user" id="arquivo">
+
+    </div>
+
+
+ </form>
+
+</body>
+</html>
